@@ -1,0 +1,37 @@
+﻿@model StudentModel[]
+
+@{
+    ViewData["Title"] = "StudentView";
+}
+
+<h1>Students Database</h1>
+<table>
+	<tr>
+		<td>Id</td>
+		<td>First Name</td>
+		<td>Middle Name</td>
+		<td>Last Name</td>
+		<td>Class Name</td>
+	</tr>
+	@*@foreach(StudentModel student in Model.Students)
+		{
+		<tr>
+			<td>@student.Id</td>
+			<td>@student.FamilyName</td>
+			<td>@student.MiddleName</td>
+			<td>@student.LastName</td>
+			<td>@student.Class</td>
+		</tr>
+		}*@
+	@foreach (StudentModel student in Model)	//now that Model is of type Array<StudentModel>
+	{
+		<tr>
+			<td>@student.Id</td>
+			<td>@student.FamilyName</td>
+			<td>@student.MiddleName</td>
+			<td>@student.LastName</td>
+			<td>@student.Class</td>
+		</tr>
+	}
+	@await Html.PartialAsync("_StudentPartial", Model);
+</table>

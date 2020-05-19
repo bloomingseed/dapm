@@ -1,0 +1,27 @@
+﻿@model StudentLiteViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Students Table in Sqlite database</h1>
+<h2>Index</h2>
+
+<table>
+	<tr>
+		<td>Id</td>
+		<td>First Name</td>
+		<td>Middle Name</td>
+		<td>Last Name</td>
+		<td>Class Name</td>
+	</tr>
+	@foreach (StudentLiteModel student in Model.studentLites)
+	{
+		<tr>
+			<td>@student.Id</td>
+			<td>@student.FirstName</td>
+			<td>@student.MiddleName</td>
+			<td>@student.LastName</td>
+			<td>@student.Class</td>
+		</tr>
+	}
+</table>

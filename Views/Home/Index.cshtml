@@ -1,0 +1,28 @@
+﻿@{
+	ViewData["Title"] = "Home Page";
+}
+<!-- <link rel="stylesheet" href="~/css/StyleSheet.css" />-->
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+	<h1>@(8)</h1>
+	@{ 
+		int a = 0, b = 10;
+	}
+	@if (a == b)
+	{
+		<h1>a equals b</h1>
+	}
+	@(10)//C# singleline comment
+	@(10)  // C# singleline comment having whitespace
+	@(10)  /*C# multiline comment*/
+	@{ 
+		; //C# singleline comment
+		; /*multiline comment
+		*/
+		;
+		
+	}
+	<span id="signature">A test by xceeded</span>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<script src="~/js/JavaScript.js"></script>
